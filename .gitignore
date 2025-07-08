@@ -1,0 +1,39 @@
+# Ignorar todo dentro de las carpetas principales
+0_50/*
+0_60/*
+0_70/*
+0_80/*
+0_85/*
+0_90/*
+
+# PERMITIR carpetas intermedias para que git vea los archivos
+!0_50/dat/
+!0_60/dat/
+!0_70/dat/
+!0_80/dat/
+!0_85/dat/
+!0_90/dat/
+
+!0_50/dat_order_parameters/
+!0_60/dat_order_parameters/
+!0_70/dat_order_parameters/
+!0_80/dat_order_parameters/
+!0_85/dat_order_parameters/
+!0_90/dat_order_parameters/
+
+# EXCEPTUAR archivos específicos en dat/
+!0_50/dat/culture_initial_number_of_cells=10000_density=0.50_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_60/dat/culture_initial_number_of_cells=10000_density=0.60_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_70/dat/culture_initial_number_of_cells=10000_density=0.70_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_80/dat/culture_initial_number_of_cells=10000_density=0.80_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_85/dat/culture_initial_number_of_cells=10000_density=0.85_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_90/dat/culture_initial_number_of_cells=10000_density=0.90_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+
+# EXCEPTUAR archivos específicos en dat_order_parameters/ (prefijo op_)
+!0_50/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.50_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_60/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.60_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_70/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.70_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_80/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.80_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_85/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.85_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!0_90/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.90_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+
