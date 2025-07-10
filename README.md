@@ -8,6 +8,11 @@ Description of directories:
   - `new`: Where new data can be stored before merging it with the global data.
   - `other scripts`: Ideas of scripts that can be used in the future.
 
-There also are a huge variety of scripts to analyse the data. These are:
-  - clusters.py
+There are to types of scripts used to analyze the data. On one hand there are .py scripts that generate new data in order to manipulate lighter data. These are:
+  - `dat_clusters.py`: Generates data about clustering. For every file in `dat_labels`, it creates a new file with the number of clusters and the biggest cluster size in a given step and seed. Also, given a density it generates a .csv with all the cluster sizes which can be used to study the final cluster size distribution.
+  - `dat_local_parameters.py`: It creates files with the information of local order parameters and phenotypes for every step and seed, given a density. The list box_lengths can be changed in order to study length correlation.
+  - `dat_ph_aspect_ratio.py`: For every file, it calculates and save the quantity of each phenotype in that seed and step.
+
+On the other hand, there are .ipynb notebooks used to analize the data generated. These are:
+  - `analysis_clusters.ipynb`: It contains all the analysis of clustering. It starts with the cluster evolution, studying both how number of clusters and biggest cluster size varies through time for a given (and every) density. Then the final cluster size distribution for every density is studied.  
   - ...
