@@ -52,7 +52,7 @@ def calculate_final_phenotype(num_cells, max_step, dens, step, rng_seed):
     }
 
 
-density = [0.5, 0.6, 0.7, 0.8, 0.85, 0.9]
+density = [0.4, 0.5, 0.6, 0.7, 0.8, 0.81, 0.82, 0.83, 0.84, 0.85, 0.86, 0.87, 0.88, 0.9]
 nc = 10_000
 max_step = 60_000
 step = 100
