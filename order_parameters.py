@@ -31,10 +31,8 @@ def calculate_order_parameter(num_cells, max_step, dens, step, rng_seed):
                     dat_actual
                 )
             else:
-                #print("No existe el archivo: ", dat_actual)
                 frenar = True
                 break
-
 
             nematic = df_tic["nematic"].mean()
             polar = df_tic["polar"].mean()
