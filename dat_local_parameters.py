@@ -23,7 +23,7 @@ def save_local_phenotype(mean_ar, fraction_elongated, fraction_round, fraction_b
     """
     # Name of the output file
     output_file = (
-        f"{dens_folder}/dat_local_phenotype/"
+        f"data/N={num_cells}/{dens_folder}/dat_local_phenotype/"
         f"local_phenotype_box_length={int(box_length)}_"
         f"culture_initial_number_of_cells={number_cells}_density={dens}_"
         f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_"
@@ -74,7 +74,7 @@ def save_local_order_parameters(nematic, polar, nematic_2, polar_2, dens, number
     """
     # Name of the output file
     output_file = (
-        f"{dens_folder}/dat_local_op/"
+        f"data/N={num_cells}/{dens_folder}/dat_local_op/"
         f"local_op_box_length={int(box_length)}_"
         f"culture_initial_number_of_cells={number_cells}_density={dens}_"
         f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_"
@@ -125,7 +125,7 @@ for dens in density:
                 number_cells_box_attempt = []
                 # Read the file
                 dat_actual = (
-                    f"{dens_folder}/dat/"
+                    f"data/N={num_cells}/{dens_folder}/dat/"
                     f"culture_initial_number_of_cells={number_cells}_density={dens}_"
                     f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_"
                     f"With_Shrinking_rng_seed={seed}_step={tic:05}.dat"

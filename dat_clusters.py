@@ -13,7 +13,7 @@ def save_individual_cluster_files(num_cells, max_step, dens, step, rng_seed):
         for seed in rng_seed:
             # Read every .dat
             dat_actual = (
-                f"{dens_folder}/dat_labels/culture_initial_number_of_cells={num_cells}_density={dens}_"
+                f"data/N={num_cells}/{dens_folder}/dat_labels/culture_initial_number_of_cells={num_cells}_density={dens}_"
                 f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_"
                 f"rng_seed={seed}_step={tic:05}.dat"
             )
@@ -45,7 +45,7 @@ def save_individual_cluster_files(num_cells, max_step, dens, step, rng_seed):
                     df_tic_elongated['label2'].value_counts().max() if not df_tic_elongated.empty else 0
                 )
                 # Open and write the new .dat
-                output_file = f"{dens_folder}/dat_clusters/clusters_culture_initial_number_of_cells={num_cells}_density={dens}_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed={seed}_step={tic:05}.dat"
+                output_file = f"data/N={num_cells}/{dens_folder}/dat_clusters/clusters_culture_initial_number_of_cells={num_cells}_density={dens}_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed={seed}_step={tic:05}.dat"
                 with open(output_file, "w") as f:
                     f.write("n_round,max_round,n_elongated,max_elongated,n_round_2,max_round_2,n_elongated_2,max_elongated_2\n")
                     f.write(f"{number_clusters_round},{size_biggest_cluster_round},{number_clusters_elongated},{size_biggest_cluster_elongated},{number_clusters_round_2},{size_biggest_cluster_round_2},{number_clusters_elongated_2},{size_biggest_cluster_elongated_2}\n")
@@ -63,7 +63,7 @@ def save_distribution_last_step(num_cells, dens, rng_seed, last_step):
     """
     # Create the outputdir
     dens_folder = f"{dens:.2f}".replace(".", "_")
-    output_dir = f"{dens_folder}/cluster_distributions_final"
+    output_dir = f"data/N={num_cells}/{dens_folder}/cluster_distributions_final"
     os.makedirs(output_dir, exist_ok=True)
 
     # Acumulate the sizes
@@ -75,7 +75,7 @@ def save_distribution_last_step(num_cells, dens, rng_seed, last_step):
     for seed in rng_seed:
         # Read the .dat
         final_dat = (
-            f"{dens_folder}/dat_labels/culture_initial_number_of_cells={num_cells}_density={dens}_"
+            f"data/N={num_cells}/{dens_folder}/dat_labels/culture_initial_number_of_cells={num_cells}_density={dens}_"
             f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_"
             f"rng_seed={seed}_step={last_step:05}.dat"
         )
@@ -132,6 +132,6 @@ rng_seed = rng_1.integers(low=2**20, high=2**50, size=number_of_realizations)
 
 for dens in density_list:
     dens_folder = f"{dens:.2f}".replace(".", "_")
-    os.makedirs(f"{dens_folder}/dat_clusters", exist_ok=True)
+    os.makedirs(f"data/N={num_cells}/{dens_folder}/dat_clusters", exist_ok=True)
     last_step = save_individual_cluster_files(nc, max_step, dens, step, rng_seed)
     save_distribution_last_step(nc, dens, rng_seed, last_step)
