@@ -3,6 +3,8 @@
 # PARA N=10_000
 # ================================================
 
+nuevos/
+
 # Ignorar todo dentro de las carpetas principales
 data/N=10_000/0_40/*
 data/N=10_000/0_50/*
