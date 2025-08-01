@@ -21,6 +21,22 @@ data/N=10_000/0_87/*
 data/N=10_000/0_88/*
 data/N=10_000/0_90/*
 
+# PERMITIR carpetas de las imagenes de estados estacionarios
+!data/N=10_000/0_40/steady_state_images/
+!data/N=10_000/0_50/steady_state_images/
+!data/N=10_000/0_60/steady_state_images/
+!data/N=10_000/0_70/steady_state_images/
+!data/N=10_000/0_80/steady_state_images/
+!data/N=10_000/0_81/steady_state_images/
+!data/N=10_000/0_82/steady_state_images/
+!data/N=10_000/0_83/steady_state_images/
+!data/N=10_000/0_84/steady_state_images/
+!data/N=10_000/0_85/steady_state_images/
+!data/N=10_000/0_86/steady_state_images/
+!data/N=10_000/0_87/steady_state_images/
+!data/N=10_000/0_88/steady_state_images/
+!data/N=10_000/0_90/steady_state_images/
+
 # PERMITIR carpetas intermedias para que git vea los archivos
 !data/N=10_000/0_40/dat/
 !data/N=10_000/0_50/dat/
@@ -137,6 +153,22 @@ data/N=5_000/0_86/*
 data/N=5_000/0_87/*
 data/N=5_000/0_88/*
 data/N=5_000/0_90/*
+
+# PERMITIR carpetas con las imagenes de estado estacionario
+!data/N=5_000/0_40/steady_state_images/
+!data/N=5_000/0_50/steady_state_images/
+!data/N=5_000/0_60/steady_state_images/
+!data/N=5_000/0_70/steady_state_images/
+!data/N=5_000/0_80/steady_state_images/
+!data/N=5_000/0_81/steady_state_images/
+!data/N=5_000/0_82/steady_state_images/
+!data/N=5_000/0_83/steady_state_images/
+!data/N=5_000/0_84/steady_state_images/
+!data/N=5_000/0_85/steady_state_images/
+!data/N=5_000/0_86/steady_state_images/
+!data/N=5_000/0_87/steady_state_images/
+!data/N=5_000/0_88/steady_state_images/
+!data/N=5_000/0_90/steady_state_images/
 
 # PERMITIR carpetas intermedias
 !data/N=5_000/0_40/dat/
