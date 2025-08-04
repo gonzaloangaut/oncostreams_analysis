@@ -9,7 +9,7 @@ Software for analyzing data from oncostream simulations.
   - **`dat/`**: `.dat` files with the position, orientation, and aspect ratio of each cell for every step and seed.  
   - **`dat_order_parameters/`**: Information about polar and nematic order parameters and the fraction of elongated cells for each step and seed.  
   - Example files are kept only for reference due to the large amount of data.  
-  - **`steady_state_images/`**A folder with images of the steady state for each density is also included.
+  - **`steady_state_images/`**: A folder with images of the steady state for each density is also included.
 
 - **`graphs/`**: Stores all the figures generated during the analysis.  
 
