@@ -1,18 +1,45 @@
 # oncostreams_analysis
 
-Software for analyzing data from oncostream simulations
+Software for analyzing data from oncostream simulations.
 
-Description of directories:
-  - `0_50`, `0_60`, `0_70`, `0_80`, `0_85`, `0_90`: Examples of how a density directory should be. Inside there is a folder called `dat` containing all the .dat files with the position, orientation and aspect ratio of each cell for each step and seed. There is also another folder, `dat_order_parameters`, that have information about the order parameters (polar and nematic) and the fraction of elongated cells for each step and seed. We have only keep one file in each folder as an example because of the huge amount of data.
-  - `graphs`: Where all the graphs made in the analysis are saved.
-  - `new`: Where new data can be stored before merging it with the global data.
-  - `other scripts`: Ideas of scripts that can be used in the future.
+## Repository structure
 
-There are to types of scripts used to analyze the data. On one hand there are .py scripts that generate new data in order to manipulate lighter data. These are:
-  - `dat_clusters.py`: Generates data about clustering. For every file in `dat_labels`, it creates a new file with the number of clusters and the biggest cluster size in a given step and seed. Also, given a density it generates a .csv with all the cluster sizes which can be used to study the final cluster size distribution.
-  - `dat_local_parameters.py`: It creates files with the information of local order parameters and phenotypes for every step and seed, given a density. The list box_lengths can be changed in order to study length correlation.
-  - `dat_ph_aspect_ratio.py`: For every file, it calculates and save the quantity of each phenotype in that seed and step.
+- **`data/`**: Contains all the simulation data.  
+  Inside, there are folders named after the number of cells. Each contains subdirectories for different densities, following this structure:  
+  - **`dat/`**: `.dat` files with the position, orientation, and aspect ratio of each cell for every step and seed.  
+  - **`dat_order_parameters/`**: Information about polar and nematic order parameters and the fraction of elongated cells for each step and seed.  
+  - Example files are kept only for reference due to the large amount of data.  
+  - **`steady_state_images/`**A folder with images of the steady state for each density is also included.
 
-On the other hand, there are .ipynb notebooks used to analize the data generated. These are:
-  - `analysis_clusters.ipynb`: It contains all the analysis of clustering. It starts with the cluster evolution, studying both how number of clusters and biggest cluster size varies through time for a given (and every) density. Then the final cluster size distribution for every density is studied.  
-  - ...
+- **`graphs/`**: Stores all the figures generated during the analysis.  
+
+- **`other_scripts/`**: Contains ideas and draft scripts for potential future use.
+
+## Analysis scripts
+
+There are two types of scripts used to analyze the data:
+
+### Python scripts (`.py`)
+Generate lighter, intermediate data to simplify the analysis:
+- **`dat_clusters.py`**:  
+  Generates clustering data. For every file in `dat_labels`, it outputs a new file with the number of clusters and the size of the largest cluster for each step and seed.  
+  Also generates `.csv` files with all cluster sizes to study the final cluster size distribution.  
+- **`dat_local_parameters.py`**:  
+  Computes local order parameters and phenotypes for each step and seed at a given density.  
+  The `box_lengths` list can be adjusted to study correlation lengths.  
+- **`dat_ph_aspect_ratio.py`**:  
+  Calculates and saves the quantity of each phenotype for every step and seed.
+
+### Jupyter notebooks (`.ipynb`)
+Used to visualize and analyze the processed data:
+- **`analysis_clusters.ipynb`**:  
+  Studies clustering dynamics. First analyzes the time evolution of the number of clusters and the largest cluster size, then the final cluster size distribution for each density.  
+- **`analysis_order_parameters.ipynb`**:  
+  Studies polar and nematic order parameters. Plots their evolution in time and the steady-state values versus density.  
+- **`analysis_phenotypes.ipynb`**:  
+  Analyzes phenotype evolution over time and steady-state values versus density.  
+- **`analysis_local.ipynb`**:  
+  Analyzes local properties. Computes local order parameters and phenotypes for various box sizes and compares local order for different spatial scales.
+
+
+
