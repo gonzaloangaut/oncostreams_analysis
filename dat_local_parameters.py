@@ -23,7 +23,7 @@ def save_local_phenotype(mean_ar, fraction_elongated, fraction_round, fraction_b
     """
     # Name of the output file
     output_file = (
-        f"data/N={num_cells}/{dens_folder}/dat_local_phenotype/"
+        f"data/N={number_cells:_}/{dens_folder}/dat_local_phenotype_final/"
         f"local_phenotype_box_length={int(box_length)}_"
         f"culture_initial_number_of_cells={number_cells}_density={dens}_"
         f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_"
@@ -74,7 +74,7 @@ def save_local_order_parameters(nematic, polar, nematic_2, polar_2, dens, number
     """
     # Name of the output file
     output_file = (
-        f"data/N={num_cells}/{dens_folder}/dat_local_op/"
+        f"data/N={number_cells:_}/{dens_folder}/dat_local_op_final/"
         f"local_op_box_length={int(box_length)}_"
         f"culture_initial_number_of_cells={number_cells}_density={dens}_"
         f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_"
@@ -87,7 +87,7 @@ def save_local_order_parameters(nematic, polar, nematic_2, polar_2, dens, number
         f.write(f"{nematic:.5f},{polar:.5f},{nematic_2:.5f},{polar_2:.5f},{int(round(number_cells_box))}\n")
 
 # Simulation parameters
-density = [0.5, 0.6, 0.7, 0.8, 0.85, 0.9]
+density = [0.9]
 number_cells = 10_000
 cell_area = np.pi
 attempts = 10
@@ -99,87 +99,112 @@ seed_1 = 0x87351080E25CB0FAD77A44A3BE03B491
 rng_1 = np.random.default_rng(seed_1)
 rng_seed = rng_1.integers(low=2**20, high=2**50, size=number_of_realizations)
 
-# List with the box lengths we want to study
-box_lengths = [5, 10, 15, 20, 25, 30]
 # Save data for every density
 for dens in density:
-    # Calculate the side given the density
+    # Calculate the side of the system from the density
     side = np.sqrt(number_cells * cell_area / dens)
+
+    # Generate box lengths from 5 up to the side length
+    box_lengths = np.arange(5, side, 5).tolist()
+    if side not in box_lengths:
+        box_lengths.append(int(side))
+
     dens_folder = f"{dens:.2f}".replace(".", "_")
+
+    # Define a boolean to stop where there are no more data
+    stop = False
+    # Check for which was the last step
+    for tic in range(0, max_step+1, step):
+        for seed in rng_seed:
+            dat_actual = (
+                f"data/N={number_cells:_}/{dens_folder}/dat/"
+                f"culture_initial_number_of_cells={number_cells}_density={dens}_"
+                f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_"
+                f"With_Shrinking_rng_seed={seed}_step={tic:05}.dat"
+            )
+            if not os.path.exists(dat_actual):
+                stop = True
+                break
+        if stop is True:
+            last_step = tic - step
+            break
+    else:
+        # if the for does not break, last step is the max
+        last_step = max_step
+
+    print("Last step = ", last_step, " for density = ", dens)
 
     # Loop for every box length
     for length in box_lengths:
-        # Loop for every step
-        for tic in range(0, max_step + 1, step):
-            # Loop for every seed
-            for seed in rng_seed:
-                # Initialize lists to save the parameters
-                mean_ar_attempt = []
-                fraction_elongated_attempt = []
-                fraction_round_attempt = []
-                fraction_binary_attempt = []
-                nematic_attempt = []
-                polar_attempt = []
-                nematic_2_attempt = []
-                polar_2_attempt = []
-                number_cells_box_attempt = []
-                # Read the file
-                dat_actual = (
-                    f"data/N={num_cells}/{dens_folder}/dat/"
-                    f"culture_initial_number_of_cells={number_cells}_density={dens}_"
-                    f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_"
-                    f"With_Shrinking_rng_seed={seed}_step={tic:05}.dat"
-                )
-                if not os.path.exists(dat_actual):
-                    continue
-                df_tic = pd.read_csv(dat_actual)
+        # Loop for every seed
+        for seed in rng_seed:
+            # Initialize lists to save the parameters
+            mean_ar_attempt = []
+            fraction_elongated_attempt = []
+            fraction_round_attempt = []
+            fraction_binary_attempt = []
+            nematic_attempt = []
+            polar_attempt = []
+            nematic_2_attempt = []
+            polar_2_attempt = []
+            number_cells_box_attempt = []
+            # Read the file
+            dat_actual = (
+                f"data/N={number_cells:_}/{dens_folder}/dat/"
+                f"culture_initial_number_of_cells={number_cells}_density={dens}_"
+                f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_"
+                f"With_Shrinking_rng_seed={seed}_step={last_step:05}.dat"
+            )
+            if not os.path.exists(dat_actual):
+                continue
+            df_tic = pd.read_csv(dat_actual)
 
-                # attempt is the quantity of boxes we choose in every seed and tic
-                for i in range(attempts):
-                    # Choose a random center
-                    center = np.array([
-                        rng_1.uniform(0, side),
-                        rng_1.uniform(0, side),
-                        0
-                    ])
-                    half_length = length / 2
+            # attempt is the quantity of boxes we choose in every seed and tic
+            for i in range(attempts):
+                # Choose a random center
+                center = np.array([
+                    rng_1.uniform(0, side),
+                    rng_1.uniform(0, side),
+                    0
+                ])
+                half_length = length / 2
 
-                    # Apply boundary conditions (check)
-                    df = df_tic.copy()
-                    dx = (df["position_x"] - center[0] + side/2) % side - side/2
-                    dy = (df["position_y"] - center[1] + side/2) % side - side/2
+                # Apply boundary conditions (check)
+                df = df_tic.copy()
+                dx = (df["position_x"] - center[0] + side/2) % side - side/2
+                dy = (df["position_y"] - center[1] + side/2) % side - side/2
 
-                    mask = (np.abs(dx) <= half_length) & (np.abs(dy) <= half_length)
-                    df_filtered = df[mask].copy()
+                mask = (np.abs(dx) <= half_length) & (np.abs(dy) <= half_length)
+                df_filtered = df[mask].copy()
 
-                    # Calculate local phenotypes and order parameters
-                    number_cells_box = len(df_filtered)
-                    mean_ar, fraction_elongated, fraction_round, fraction_binary = calculate_local_phenotype(df_filtered, number_cells_box)
-                    mean_ar_attempt.append(mean_ar)
-                    fraction_elongated_attempt.append(fraction_elongated)
-                    fraction_round_attempt.append(fraction_round)
-                    fraction_binary_attempt.append(fraction_binary)
+                # Calculate local phenotypes and order parameters
+                number_cells_box = len(df_filtered)
+                mean_ar, fraction_elongated, fraction_round, fraction_binary = calculate_local_phenotype(df_filtered, number_cells_box)
+                mean_ar_attempt.append(mean_ar)
+                fraction_elongated_attempt.append(fraction_elongated)
+                fraction_round_attempt.append(fraction_round)
+                fraction_binary_attempt.append(fraction_binary)
 
-                    nematic, polar, nematic_2, polar_2 = calculate_local_order_parameters(df_filtered, number_cells_box)
-                    nematic_attempt.append(nematic)
-                    polar_attempt.append(polar)
-                    nematic_2_attempt.append(nematic_2)
-                    polar_2_attempt.append(polar_2)
+                nematic, polar, nematic_2, polar_2 = calculate_local_order_parameters(df_filtered, number_cells_box)
+                nematic_attempt.append(nematic)
+                polar_attempt.append(polar)
+                nematic_2_attempt.append(nematic_2)
+                polar_2_attempt.append(polar_2)
 
-                    number_cells_box_attempt.append(number_cells_box)
-                # Calculate the means
-                mean_ar_mean = np.nanmean(mean_ar_attempt)
-                fraction_elongated_mean = np.nanmean(fraction_elongated_attempt)
-                fraction_round_mean = np.nanmean(fraction_round_attempt)
-                fraction_binary_mean = np.nanmean(fraction_binary_attempt)
+                number_cells_box_attempt.append(number_cells_box)
+            # Calculate the means
+            mean_ar_mean = np.nanmean(mean_ar_attempt)
+            fraction_elongated_mean = np.nanmean(fraction_elongated_attempt)
+            fraction_round_mean = np.nanmean(fraction_round_attempt)
+            fraction_binary_mean = np.nanmean(fraction_binary_attempt)
 
-                nematic_mean = np.nanmean(nematic_attempt)
-                polar_mean = np.nanmean(polar_attempt)
-                nematic_2_mean = np.nanmean(nematic_2_attempt)
-                polar_2_mean = np.nanmean(polar_2_attempt)
+            nematic_mean = np.nanmean(nematic_attempt)
+            polar_mean = np.nanmean(polar_attempt)
+            nematic_2_mean = np.nanmean(nematic_2_attempt)
+            polar_2_mean = np.nanmean(polar_2_attempt)
 
-                number_cells_box_mean = np.mean(number_cells_box_attempt)
-                # Save everything in the files
-                save_local_phenotype(mean_ar_mean, fraction_elongated_mean, fraction_round_mean, fraction_binary_mean, dens, number_cells, length, seed, tic, dens_folder, number_cells_box_mean)
-                save_local_order_parameters(nematic_mean, polar_mean, nematic_2_mean, polar_2_mean, dens, number_cells, length, seed, tic, dens_folder, number_cells_box_mean)
+            number_cells_box_mean = np.mean(number_cells_box_attempt)
+            # Save everything in the files
+            save_local_phenotype(mean_ar_mean, fraction_elongated_mean, fraction_round_mean, fraction_binary_mean, dens, number_cells, length, seed, last_step, dens_folder, number_cells_box_mean)
+            save_local_order_parameters(nematic_mean, polar_mean, nematic_2_mean, polar_2_mean, dens, number_cells, length, seed, last_step, dens_folder, number_cells_box_mean)
 
