@@ -38,8 +38,5 @@ Used to visualize and analyze the processed data:
   Studies polar and nematic order parameters. Plots their evolution in time and the steady-state values versus density.  
 - **`analysis_phenotypes.ipynb`**:  
   Analyzes phenotype evolution over time and steady-state values versus density.  
-- **`analysis_local.ipynb`**:  
-  Analyzes local properties. Computes local order parameters and phenotypes for various box sizes and compares local order for different spatial scales.
-
-
-
+- **`analysis_local_op.ipynb`**:  
+  Analyzes local order parameter.
