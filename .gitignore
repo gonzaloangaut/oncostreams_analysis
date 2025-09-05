@@ -21,6 +21,22 @@ data/N=10_000/0_87/*
 data/N=10_000/0_88/*
 data/N=10_000/0_90/*
 
+# Permitir dat finales
+!data/N=10_000/0_40/dat_final/
+!data/N=10_000/0_50/dat_final/
+!data/N=10_000/0_60/dat_final/
+!data/N=10_000/0_70/dat_final/
+!data/N=10_000/0_80/dat_final/
+!data/N=10_000/0_81/dat_final/
+!data/N=10_000/0_82/dat_final/
+!data/N=10_000/0_83/dat_final/
+!data/N=10_000/0_84/dat_final/
+!data/N=10_000/0_85/dat_final/
+!data/N=10_000/0_86/dat_final/
+!data/N=10_000/0_87/dat_final/
+!data/N=10_000/0_88/dat_final/
+!data/N=10_000/0_90/dat_final/
+
 # PERMITIR carpetas de las imagenes de estados estacionarios
 !data/N=10_000/0_40/steady_state_images/
 !data/N=10_000/0_50/steady_state_images/
@@ -154,6 +170,22 @@ data/N=5_000/0_87/*
 data/N=5_000/0_88/*
 data/N=5_000/0_90/*
 
+# Permitir dat finales
+!data/N=5_000/0_40/dat_final/
+!data/N=5_000/0_50/dat_final/
+!data/N=5_000/0_60/dat_final/
+!data/N=5_000/0_70/dat_final/
+!data/N=5_000/0_80/dat_final/
+!data/N=5_000/0_81/dat_final/
+!data/N=5_000/0_82/dat_final/
+!data/N=5_000/0_83/dat_final/
+!data/N=5_000/0_84/dat_final/
+!data/N=5_000/0_85/dat_final/
+!data/N=5_000/0_86/dat_final/
+!data/N=5_000/0_87/dat_final/
+!data/N=5_000/0_88/dat_final/
+!data/N=5_000/0_90/dat_final/
+
 # PERMITIR carpetas con las imagenes de estado estacionario
 !data/N=5_000/0_40/steady_state_images/
 !data/N=5_000/0_50/steady_state_images/
@@ -286,6 +318,22 @@ data/N=2_000/0_86/*
 data/N=2_000/0_87/*
 data/N=2_000/0_88/*
 data/N=2_000/0_90/*
+
+# Permitir dat finales
+!data/N=2_000/0_40/dat_final/
+!data/N=2_000/0_50/dat_final/
+!data/N=2_000/0_60/dat_final/
+!data/N=2_000/0_70/dat_final/
+!data/N=2_000/0_80/dat_final/
+!data/N=2_000/0_81/dat_final/
+!data/N=2_000/0_82/dat_final/
+!data/N=2_000/0_83/dat_final/
+!data/N=2_000/0_84/dat_final/
+!data/N=2_000/0_85/dat_final/
+!data/N=2_000/0_86/dat_final/
+!data/N=2_000/0_87/dat_final/
+!data/N=2_000/0_88/dat_final/
+!data/N=2_000/0_90/dat_final/
 
 # PERMITIR carpetas con las imagenes de estado estacionario
 !data/N=2_000/0_40/steady_state_images/
