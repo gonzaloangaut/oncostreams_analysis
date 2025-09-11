@@ -1,6 +1,6 @@
 # oncostreams_analysis
 
-Software for analyzing data from oncostream simulations.
+Software for analyzing data from oncostream simulations. The repository contains raw simulation data, processing scripts, and visualization notebooks to study clustering, order parameters, and phenotypic transitions.
 
 ## Repository structure
 
