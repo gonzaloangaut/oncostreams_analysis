@@ -11,7 +11,7 @@ Software for analyzing data from oncostream simulations.
   - Example files are kept only for reference due to the large amount of data.  
   - **`steady_state_images/`**: A folder with images of the steady state for each density is also included.
 
-- **`graphs/`**: Stores all the figures generated during the analysis.  
+- **`graphs/`**: Stores all the figures generated during the analysis. Contains figures grouped by the number of cells, as well as comparison plots across different system sizes..
 
 - **`other_scripts/`**: Contains ideas and draft scripts for potential future use.
 
@@ -24,9 +24,6 @@ Generate lighter, intermediate data to simplify the analysis:
 - **`dat_clusters.py`**:  
   Generates clustering data. For every file in `dat_labels`, it outputs a new file with the number of clusters and the size of the largest cluster for each step and seed.  
   Also generates `.csv` files with all cluster sizes to study the final cluster size distribution.  
-- **`dat_local_parameters.py`**:  
-  Computes local order parameters and phenotypes for each step and seed at a given density.  
-  The `box_lengths` list can be adjusted to study correlation lengths.  
 - **`dat_ph_aspect_ratio.py`**:  
   Calculates and saves the quantity of each phenotype for every step and seed.
 
