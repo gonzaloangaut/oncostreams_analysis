@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Suponiendo que ya tienes estas variables definidas
-list_density = [0.86]  # ejemplo de densidades
+list_density = [0.845, 0.855]  # ejemplo de densidades
 num_cells = 2_000  # número de células
 max_step = 60_000  # paso máximo
 step = 100  # intervalo de pasos
@@ -23,7 +23,7 @@ rng_seed = rng_1.integers(
 
 
 for dens in list_density:
-    dens_folder = f"{dens:.2f}".replace(".", "_")
+    dens_folder = f"{dens:.3f}".replace(".", "_")
     # Crear carpeta 'dat_finales' si no existe
     os.makedirs(f"{dens_folder}/dat_final", exist_ok=True)
     for seed in rng_seed:
