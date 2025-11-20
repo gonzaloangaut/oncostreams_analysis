@@ -2,6 +2,18 @@ import numpy as np
 import pandas as pd
 import os
 
+def biggest_two(df, label_name):
+    """
+    Function to get the size of the biggest and second biggest cluster
+    """
+    if df.empty:
+        return 0, 0
+    counts = df[label_name].value_counts().values
+    biggest = counts[0] if len(counts) > 0 else 0
+    second  = counts[1] if len(counts) > 1 else 0
+    return biggest, second
+
+
 def save_individual_cluster_files(num_cells, max_step, dens, step, rng_seed):
     """
     Function to save the files containing the cluster information for each seed and step
@@ -27,113 +39,28 @@ def save_individual_cluster_files(num_cells, max_step, dens, step, rng_seed):
                 
                 # Take the number of clusters and size for each df
                 number_clusters_round = df_tic_round['label'].nunique()
-                size_biggest_cluster_round = (
-                    df_tic_round['label'].value_counts().max() if not df_tic_round.empty else 0
-                )
                 number_clusters_elongated = df_tic_elongated['label'].nunique()
-                size_biggest_cluster_elongated = (
-                    df_tic_elongated['label'].value_counts().max() if not df_tic_elongated.empty else 0
-                )
-                
+                # and the sizes of the biggest clusters
+                size_biggest_cluster_round, size_second_cluster_round = biggest_two(df_tic_round, 'label')
+                size_biggest_cluster_elongated, size_second_cluster_elongated = biggest_two(df_tic_elongated, 'label')
+
                 # The same using the other label
                 number_clusters_round_2 = df_tic_round['label2'].nunique()
-                size_biggest_cluster_round_2 = (
-                    df_tic_round['label2'].value_counts().max() if not df_tic_round.empty else 0
-                )
                 number_clusters_elongated_2 = df_tic_elongated['label2'].nunique()
-                size_biggest_cluster_elongated_2 = (
-                    df_tic_elongated['label2'].value_counts().max() if not df_tic_elongated.empty else 0
-                )
+                size_biggest_cluster_round_2, size_second_cluster_round_2 = biggest_two(df_tic_round, 'label2')
+                size_biggest_cluster_elongated_2, size_second_cluster_elongated_2 = biggest_two(df_tic_elongated, 'label2')
+
                 # Open and write the new .dat
                 output_file = f"data/N={num_cells:_}/{dens_folder}/dat_clusters/max_number/clusters_culture_initial_number_of_cells={num_cells}_density={dens}_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed={seed}_step={tic:05}.dat"
                 with open(output_file, "w") as f:
-                    f.write("n_round,max_round,n_elongated,max_elongated,n_round_2,max_round_2,n_elongated_2,max_elongated_2\n")
-                    f.write(f"{number_clusters_round},{size_biggest_cluster_round},{number_clusters_elongated},{size_biggest_cluster_elongated},{number_clusters_round_2},{size_biggest_cluster_round_2},{number_clusters_elongated_2},{size_biggest_cluster_elongated_2}\n")
+                    f.write("n_round,max_round,2_max_round,n_elongated,max_elongated,2_max_elongated,n_round_2,max_round_2,2_max_round_2,n_elongated_2,max_elongated_2,2_max_elongated_2\n")
+                    f.write(f"{number_clusters_round},{size_biggest_cluster_round},{size_second_cluster_round},{number_clusters_elongated},{size_biggest_cluster_elongated},{size_second_cluster_elongated},{number_clusters_round_2},{size_biggest_cluster_round_2},{size_second_cluster_round_2},{number_clusters_elongated_2},{size_biggest_cluster_elongated_2},{size_second_cluster_elongated_2}\n")
             else:
                 # If the file does not exist, update the last step
                 last_step = tic-step
                 return last_step
     return last_step
             
-
-def get_s_list(num_cells):
-    """
-    Return 10 values of s depending on system size,
-    spaced roughly logarithmically.
-    """
-    if num_cells == 1000:
-        return [1, 2, 3, 5, 8, 13, 20, 40, 80, 160]
-    elif num_cells == 5000:
-        return [1, 3, 5, 10, 20, 40, 80, 200, 500, 1000]
-    elif num_cells == 10000:
-        return [1, 3, 5, 10, 30, 60, 120, 300, 800, 1600]
-    else:
-        # fallback: 10 log-spaced s values up to N/5
-        import numpy as np
-        return np.unique(
-            np.round(np.logspace(0, np.log10(max(10, num_cells//5)), 10)).astype(int)
-        ).tolist()
-
-
-# def save_cluster_size_distribution_10_values(num_cells, max_step, dens, step, rng_seed):
-#     """
-#     Function to save cluster size distributions P(s,t) for 10 chosen s values.
-#     Output: a .dat file per seed and step with the counts for each s.
-#     """
-#     dens_folder = f"{dens:.3f}".replace(".", "_")
-#     last_step = max_step
-
-#     # get s list for this system size
-#     s_list = get_s_list(num_cells)
-
-#     for tic in range(0, max_step + 1, step):
-#         for seed in rng_seed:
-
-#             dat_actual = (
-#                 f"data/N={num_cells:_}/{dens_folder}/dat_labels/"
-#                 f"culture_initial_number_of_cells={num_cells}_density={dens}_"
-#                 f"force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_"
-#                 f"rng_seed={seed}_step={tic:05}.dat"
-#             )
-
-#             if not os.path.exists(dat_actual):
-#                 last_step = tic - step
-#                 return last_step
-
-#             # read dataframe
-#             df_tic = pd.read_csv(dat_actual)
-
-#             # get cluster sizes from label column
-#             sizes = df_tic['label'].value_counts().values
-
-#             # quick histogram
-#             max_s = sizes.max() if len(sizes) > 0 else 0
-#             hist = np.bincount(sizes, minlength=max_s+1)
-
-#             # count how many clusters have size exactly s in s_list
-#             counts = []
-#             for s in s_list:
-#                 if s <= max_s:
-#                     counts.append(hist[s])
-#                 else:
-#                     counts.append(0)
-
-#             # output file
-#             output_file = (
-#                 f"data/N={num_cells:_}/{dens_folder}/dat_clusters/P_sizes/"
-#                 f"Psizes_culture_initial_number_of_cells={num_cells}_density={dens}_"
-#                 f"rng_seed={seed}_step={tic:05}.dat"
-#             )
-
-#             # write file similar in style to your original function
-#             with open(output_file, "w") as f:
-#                 header = ",".join([f"s_{s}" for s in s_list])
-#                 f.write(header + "\n")
-#                 f.write(",".join(str(c) for c in counts) + "\n")
-
-#     return last_step
-
-
 def save_distribution_last_step(num_cells, dens, rng_seed, last_step):
     """
     Function to save a unique csv with all the cell distribution in the last step
@@ -303,8 +230,6 @@ for dens in density_list:
     dens_folder = f"{dens:.3f}".replace(".", "_")
     os.makedirs(f"data/N={nc:_}/{dens_folder}/dat_clusters", exist_ok=True)
     os.makedirs(f"data/N={nc:_}/{dens_folder}/dat_clusters/max_number", exist_ok=True)
-    # os.makedirs(f"data/N={nc:_}/{dens_folder}/dat_clusters/P_sizes", exist_ok=True)
     last_step = save_individual_cluster_files(nc, max_step, dens, step, rng_seed)
-    # save_cluster_size_distribution_10_values(nc, max_step, dens, step, rng_seed)
     save_distribution_last_step(nc, dens, rng_seed, last_step)
     save_distribution_last_step_no_giant(nc, dens, rng_seed, last_step)
