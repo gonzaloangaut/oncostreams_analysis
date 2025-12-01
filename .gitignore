@@ -59,6 +59,24 @@ data/N=10_000/0_900/*
 !data/N=10_000/0_880/steady_state_images/
 !data/N=10_000/0_900/steady_state_images/
 
+# PERMITIR carpetas de ovito
+!data/N=10_000/0_400/ovito_final/
+!data/N=10_000/0_500/ovito_final/
+!data/N=10_000/0_600/ovito_final/
+!data/N=10_000/0_700/ovito_final/
+!data/N=10_000/0_800/ovito_final/
+!data/N=10_000/0_810/ovito_final/
+!data/N=10_000/0_820/ovito_final/
+!data/N=10_000/0_830/ovito_final/
+!data/N=10_000/0_840/ovito_final/
+!data/N=10_000/0_850/ovito_final/
+!data/N=10_000/0_855/ovito_final/
+!data/N=10_000/0_860/ovito_final/
+!data/N=10_000/0_865/ovito_final/
+!data/N=10_000/0_870/ovito_final/
+!data/N=10_000/0_880/ovito_final/
+!data/N=10_000/0_900/ovito_final/
+
 # PERMITIR carpetas intermedias para que git vea los archivos
 !data/N=10_000/0_400/dat/
 !data/N=10_000/0_500/dat/
@@ -226,6 +244,24 @@ data/N=5_000/0_900/*
 !data/N=5_000/0_880/steady_state_images/
 !data/N=5_000/0_900/steady_state_images/
 
+# PERMITIR carpetas con ovito
+!data/N=5_000/0_400/ovito_final/
+!data/N=5_000/0_500/ovito_final/
+!data/N=5_000/0_600/ovito_final/
+!data/N=5_000/0_700/ovito_final/
+!data/N=5_000/0_800/ovito_final/
+!data/N=5_000/0_810/ovito_final/
+!data/N=5_000/0_820/ovito_final/
+!data/N=5_000/0_830/ovito_final/
+!data/N=5_000/0_840/ovito_final/
+!data/N=5_000/0_845/ovito_final/
+!data/N=5_000/0_850/ovito_final/
+!data/N=5_000/0_855/ovito_final/
+!data/N=5_000/0_860/ovito_final/
+!data/N=5_000/0_870/ovito_final/
+!data/N=5_000/0_880/ovito_final/
+!data/N=5_000/0_900/ovito_final/
+
 # PERMITIR carpetas intermedias
 !data/N=5_000/0_400/dat/
 !data/N=5_000/0_500/dat/
@@ -392,6 +428,24 @@ data/N=2_000/0_900/*
 !data/N=2_000/0_870/steady_state_images/
 !data/N=2_000/0_880/steady_state_images/
 !data/N=2_000/0_900/steady_state_images/
+
+# PERMITIR carpetas con ovito
+!data/N=2_000/0_400/ovito_final/
+!data/N=2_000/0_500/ovito_final/
+!data/N=2_000/0_600/ovito_final/
+!data/N=2_000/0_700/ovito_final/
+!data/N=2_000/0_800/ovito_final/
+!data/N=2_000/0_810/ovito_final/
+!data/N=2_000/0_820/ovito_final/
+!data/N=2_000/0_830/ovito_final/
+!data/N=2_000/0_840/ovito_final/
+!data/N=2_000/0_845/ovito_final/
+!data/N=2_000/0_850/ovito_final/
+!data/N=2_000/0_855/ovito_final/
+!data/N=2_000/0_860/ovito_final/
+!data/N=2_000/0_870/ovito_final/
+!data/N=2_000/0_880/ovito_final/
+!data/N=2_000/0_900/ovito_final/
 
 # PERMITIR carpetas intermedias
 !data/N=2_000/0_400/dat/
