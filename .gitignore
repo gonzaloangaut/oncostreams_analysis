@@ -41,6 +41,24 @@ data/N=10_000/0_900/*
 !data/N=10_000/0_880/dat_final/
 !data/N=10_000/0_900/dat_final/
 
+# Permitir checkpoints
+!data/N=10_000/0_400/checkpoints/
+!data/N=10_000/0_500/checkpoints/
+!data/N=10_000/0_600/checkpoints/
+!data/N=10_000/0_700/checkpoints/
+!data/N=10_000/0_800/checkpoints/
+!data/N=10_000/0_810/checkpoints/
+!data/N=10_000/0_820/checkpoints/
+!data/N=10_000/0_830/checkpoints/
+!data/N=10_000/0_840/checkpoints/
+!data/N=10_000/0_850/checkpoints/
+!data/N=10_000/0_855/checkpoints/
+!data/N=10_000/0_860/checkpoints/
+!data/N=10_000/0_865/checkpoints/
+!data/N=10_000/0_870/checkpoints/
+!data/N=10_000/0_880/checkpoints/
+!data/N=10_000/0_900/checkpoints/
+
 # PERMITIR carpetas de las imagenes de estados estacionarios
 !data/N=10_000/0_400/steady_state_images/
 !data/N=10_000/0_500/steady_state_images/
@@ -226,6 +244,24 @@ data/N=5_000/0_900/*
 !data/N=5_000/0_880/dat_final/
 !data/N=5_000/0_900/dat_final/
 
+# Permitir checkpoints
+!data/N=5_000/0_400/checkpoints/
+!data/N=5_000/0_500/checkpoints/
+!data/N=5_000/0_600/checkpoints/
+!data/N=5_000/0_700/checkpoints/
+!data/N=5_000/0_800/checkpoints/
+!data/N=5_000/0_810/checkpoints/
+!data/N=5_000/0_820/checkpoints/
+!data/N=5_000/0_830/checkpoints/
+!data/N=5_000/0_840/checkpoints/
+!data/N=5_000/0_845/checkpoints/
+!data/N=5_000/0_850/checkpoints/
+!data/N=5_000/0_855/checkpoints/
+!data/N=5_000/0_860/checkpoints/
+!data/N=5_000/0_870/checkpoints/
+!data/N=5_000/0_880/checkpoints/
+!data/N=5_000/0_900/checkpoints/
+
 # PERMITIR carpetas con las imagenes de estado estacionario
 !data/N=5_000/0_400/steady_state_images/
 !data/N=5_000/0_500/steady_state_images/
@@ -410,6 +446,24 @@ data/N=2_000/0_900/*
 !data/N=2_000/0_870/dat_final/
 !data/N=2_000/0_880/dat_final/
 !data/N=2_000/0_900/dat_final/
+
+# Permitir checkpoints
+!data/N=2_000/0_400/checkpoints/
+!data/N=2_000/0_500/checkpoints/
+!data/N=2_000/0_600/checkpoints/
+!data/N=2_000/0_700/checkpoints/
+!data/N=2_000/0_800/checkpoints/
+!data/N=2_000/0_810/checkpoints/
+!data/N=2_000/0_820/checkpoints/
+!data/N=2_000/0_830/checkpoints/
+!data/N=2_000/0_840/checkpoints/
+!data/N=2_000/0_845/checkpoints/
+!data/N=2_000/0_850/checkpoints/
+!data/N=2_000/0_855/checkpoints/
+!data/N=2_000/0_860/checkpoints/
+!data/N=2_000/0_870/checkpoints/
+!data/N=2_000/0_880/checkpoints/
+!data/N=2_000/0_900/checkpoints/
 
 # PERMITIR carpetas con las imagenes de estado estacionario
 !data/N=2_000/0_400/steady_state_images/
