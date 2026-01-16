@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Suponiendo que ya tienes estas variables definidas
-list_density = [0.4, 0.5, 0.6, 0.7, 0.8, 0.81, 0.82, 0.83, 0.84, 0.85, 0.9]  # ejemplo de densidades
+list_density = [0.75, 0.76, 0.77, 0.78, 0.79]  # ejemplo de densidades
 num_cells = 1_000  # número de células
 max_step = 80_000  # paso máximo
 step = 100  # intervalo de pasos
