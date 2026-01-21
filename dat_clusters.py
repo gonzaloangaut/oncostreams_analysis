@@ -216,8 +216,8 @@ def save_distribution_last_step_no_giant(num_cells, dens, rng_seed, last_step):
 
 
 # Parameters
-density_list = [0.86, 0.87, 0.88]
-nc = 1_000
+density_list = [0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+nc = 3_000
 max_step = 80_000
 step = 100
 number_of_realizations = 64
