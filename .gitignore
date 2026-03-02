@@ -22,7 +22,9 @@ data/N=10_000/0_830/*
 data/N=10_000/0_840/*
 data/N=10_000/0_850/*
 data/N=10_000/0_855/*
+data/N=10_000/0_858/*
 data/N=10_000/0_860/*
+data/N=10_000/0_862/*
 data/N=10_000/0_865/*
 data/N=10_000/0_870/*
 data/N=10_000/0_880/*
@@ -45,7 +47,9 @@ data/N=10_000/0_900/*
 !data/N=10_000/0_840/dat_final/
 !data/N=10_000/0_850/dat_final/
 !data/N=10_000/0_855/dat_final/
+!data/N=10_000/0_858/dat_final/
 !data/N=10_000/0_860/dat_final/
+!data/N=10_000/0_862/dat_final/
 !data/N=10_000/0_865/dat_final/
 !data/N=10_000/0_870/dat_final/
 !data/N=10_000/0_880/dat_final/
@@ -68,7 +72,9 @@ data/N=10_000/0_900/*
 !data/N=10_000/0_840/checkpoints/
 !data/N=10_000/0_850/checkpoints/
 !data/N=10_000/0_855/checkpoints/
+!data/N=10_000/0_858/checkpoints/
 !data/N=10_000/0_860/checkpoints/
+!data/N=10_000/0_862/checkpoints/
 !data/N=10_000/0_865/checkpoints/
 !data/N=10_000/0_870/checkpoints/
 !data/N=10_000/0_880/checkpoints/
@@ -91,7 +97,9 @@ data/N=10_000/0_900/*
 !data/N=10_000/0_840/steady_state_images/
 !data/N=10_000/0_850/steady_state_images/
 !data/N=10_000/0_855/steady_state_images/
+!data/N=10_000/0_858/steady_state_images/
 !data/N=10_000/0_860/steady_state_images/
+!data/N=10_000/0_862/steady_state_images/
 !data/N=10_000/0_865/steady_state_images/
 !data/N=10_000/0_870/steady_state_images/
 !data/N=10_000/0_880/steady_state_images/
@@ -114,7 +122,9 @@ data/N=10_000/0_900/*
 !data/N=10_000/0_840/ovito_final/
 !data/N=10_000/0_850/ovito_final/
 !data/N=10_000/0_855/ovito_final/
+!data/N=10_000/0_858/ovito_final/
 !data/N=10_000/0_860/ovito_final/
+!data/N=10_000/0_862/ovito_final/
 !data/N=10_000/0_865/ovito_final/
 !data/N=10_000/0_870/ovito_final/
 !data/N=10_000/0_880/ovito_final/
@@ -137,7 +147,9 @@ data/N=10_000/0_900/*
 !data/N=10_000/0_840/dat/
 !data/N=10_000/0_850/dat/
 !data/N=10_000/0_855/dat/
+!data/N=10_000/0_858/dat/
 !data/N=10_000/0_860/dat/
+!data/N=10_000/0_862/dat/
 !data/N=10_000/0_865/dat/
 !data/N=10_000/0_870/dat/
 !data/N=10_000/0_880/dat/
@@ -159,7 +171,9 @@ data/N=10_000/0_900/*
 !data/N=10_000/0_840/dat_order_parameters/
 !data/N=10_000/0_850/dat_order_parameters/
 !data/N=10_000/0_855/dat_order_parameters/
+!data/N=10_000/0_858/dat_order_parameters/
 !data/N=10_000/0_860/dat_order_parameters/
+!data/N=10_000/0_862/dat_order_parameters/
 !data/N=10_000/0_865/dat_order_parameters/
 !data/N=10_000/0_870/dat_order_parameters/
 !data/N=10_000/0_880/dat_order_parameters/
@@ -182,7 +196,9 @@ data/N=10_000/0_830/dat/*
 data/N=10_000/0_840/dat/*
 data/N=10_000/0_850/dat/*
 data/N=10_000/0_855/dat/*
+data/N=10_000/0_858/dat/*
 data/N=10_000/0_860/dat/*
+data/N=10_000/0_862/dat/*
 data/N=10_000/0_865/dat/*
 data/N=10_000/0_870/dat/*
 data/N=10_000/0_880/dat/*
@@ -205,7 +221,9 @@ data/N=10_000/0_900/dat/*
 !data/N=10_000/0_840/dat/culture_initial_number_of_cells=10000_density=0.84_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_850/dat/culture_initial_number_of_cells=10000_density=0.85_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_855/dat/culture_initial_number_of_cells=10000_density=0.855_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=10_000/0_858/dat/culture_initial_number_of_cells=10000_density=0.858_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_860/dat/culture_initial_number_of_cells=10000_density=0.86_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=10_000/0_862/dat/culture_initial_number_of_cells=10000_density=0.862_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_865/dat/culture_initial_number_of_cells=10000_density=0.865_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_870/dat/culture_initial_number_of_cells=10000_density=0.87_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_880/dat/culture_initial_number_of_cells=10000_density=0.88_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
@@ -228,7 +246,9 @@ data/N=10_000/0_830/dat_order_parameters/*
 data/N=10_000/0_840/dat_order_parameters/*
 data/N=10_000/0_850/dat_order_parameters/*
 data/N=10_000/0_855/dat_order_parameters/*
+data/N=10_000/0_858/dat_order_parameters/*
 data/N=10_000/0_860/dat_order_parameters/*
+data/N=10_000/0_862/dat_order_parameters/*
 data/N=10_000/0_865/dat_order_parameters/*
 data/N=10_000/0_870/dat_order_parameters/*
 data/N=10_000/0_880/dat_order_parameters/*
@@ -251,7 +271,9 @@ data/N=10_000/0_900/dat_order_parameters/*
 !data/N=10_000/0_840/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.84_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_850/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.85_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_855/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.855_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=10_000/0_858/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.858_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_860/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.86_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=10_000/0_862/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.862_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_865/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.865_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_870/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.87_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=10_000/0_880/dat_order_parameters/op_culture_initial_number_of_cells=10000_density=0.88_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
