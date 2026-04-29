@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 # Suponiendo que ya tienes estas variables definidas
-list_density = [0.848, 0.852]  # ejemplo de densidades
+list_density = [0.85]  # ejemplo de densidades
 num_cells = 2_000  # número de células
 max_step = 80_000  # paso máximo
 step = 100  # intervalo de pasos
@@ -13,7 +13,8 @@ delta_t = 0.05
 # All the seeds
 number_of_realizations=64
 
-seed_1 = 0x87351080E25CB0FAD77A44A3BE03B491
+# seed_1 = 0x87351080E25CB0FAD77A44A3BE03B491
+seed_1 = 1
 rng_1 = np.random.default_rng(seed_1)
 
 rng_seed = rng_1.integers(
