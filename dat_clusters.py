@@ -216,14 +216,14 @@ def save_distribution_last_step_no_giant(num_cells, dens, rng_seed, last_step):
 
 
 # Parameters
-density_list = [0.852, 0.855, 0.86, 0.87, 0.88, 0.9]
-nc = 2_000
+density_list = [0.852]
+nc = 3_000
 max_step = 80_000
 step = 100
 number_of_realizations = 64
 
-#seed_1 = 0x87351080E25CB0FAD77A44A3BE03B491
-seed_1 = 1
+seed_1 = 0x87351080E25CB0FAD77A44A3BE03B491
+#seed_1 = 1
 rng_1 = np.random.default_rng(seed_1)
 rng_seed = rng_1.integers(low=2**20, high=2**50, size=number_of_realizations)
 
