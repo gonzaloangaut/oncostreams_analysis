@@ -287,8 +287,11 @@ data/N=10_000/0_900/dat_order_parameters/*
 
 # Ignorar todo dentro de las carpetas principales
 data/N=5_000/0_400/*
+data/N=5_000/0_450/*
 data/N=5_000/0_500/*
+data/N=5_000/0_550/*
 data/N=5_000/0_600/*
+data/N=5_000/0_650/*
 data/N=5_000/0_700/*
 data/N=5_000/0_750/*
 data/N=5_000/0_760/*
@@ -302,7 +305,9 @@ data/N=5_000/0_830/*
 data/N=5_000/0_840/*
 data/N=5_000/0_845/*
 data/N=5_000/0_850/*
+data/N=5_000/0_852/*
 data/N=5_000/0_853/*
+data/N=5_000/0_854/*
 data/N=5_000/0_855/*
 data/N=5_000/0_857/*
 data/N=5_000/0_860/*
@@ -312,8 +317,11 @@ data/N=5_000/0_900/*
 
 # Permitir dat finales
 !data/N=5_000/0_400/dat_final/
+!data/N=5_000/0_450/dat_final/
 !data/N=5_000/0_500/dat_final/
+!data/N=5_000/0_550/dat_final/
 !data/N=5_000/0_600/dat_final/
+!data/N=5_000/0_650/dat_final/
 !data/N=5_000/0_700/dat_final/
 !data/N=5_000/0_750/dat_final/
 !data/N=5_000/0_760/dat_final/
@@ -327,7 +335,9 @@ data/N=5_000/0_900/*
 !data/N=5_000/0_840/dat_final/
 !data/N=5_000/0_845/dat_final/
 !data/N=5_000/0_850/dat_final/
+!data/N=5_000/0_852/dat_final/
 !data/N=5_000/0_853/dat_final/
+!data/N=5_000/0_854/dat_final/
 !data/N=5_000/0_855/dat_final/
 !data/N=5_000/0_857/dat_final/
 !data/N=5_000/0_860/dat_final/
@@ -337,8 +347,11 @@ data/N=5_000/0_900/*
 
 # Permitir checkpoints
 !data/N=5_000/0_400/checkpoints/
+!data/N=5_000/0_450/checkpoints/
 !data/N=5_000/0_500/checkpoints/
+!data/N=5_000/0_550/checkpoints/
 !data/N=5_000/0_600/checkpoints/
+!data/N=5_000/0_650/checkpoints/
 !data/N=5_000/0_700/checkpoints/
 !data/N=5_000/0_750/checkpoints/
 !data/N=5_000/0_760/checkpoints/
@@ -352,7 +365,9 @@ data/N=5_000/0_900/*
 !data/N=5_000/0_840/checkpoints/
 !data/N=5_000/0_845/checkpoints/
 !data/N=5_000/0_850/checkpoints/
+!data/N=5_000/0_852/checkpoints/
 !data/N=5_000/0_853/checkpoints/
+!data/N=5_000/0_854/checkpoints/
 !data/N=5_000/0_855/checkpoints/
 !data/N=5_000/0_857/checkpoints/
 !data/N=5_000/0_860/checkpoints/
@@ -362,8 +377,11 @@ data/N=5_000/0_900/*
 
 # PERMITIR carpetas con las imagenes de estado estacionario
 !data/N=5_000/0_400/steady_state_images/
+!data/N=5_000/0_450/steady_state_images/
 !data/N=5_000/0_500/steady_state_images/
+!data/N=5_000/0_550/steady_state_images/
 !data/N=5_000/0_600/steady_state_images/
+!data/N=5_000/0_650/steady_state_images/
 !data/N=5_000/0_700/steady_state_images/
 !data/N=5_000/0_750/steady_state_images/
 !data/N=5_000/0_760/steady_state_images/
@@ -377,7 +395,9 @@ data/N=5_000/0_900/*
 !data/N=5_000/0_840/steady_state_images/
 !data/N=5_000/0_845/steady_state_images/
 !data/N=5_000/0_850/steady_state_images/
+!data/N=5_000/0_852/steady_state_images/
 !data/N=5_000/0_853/steady_state_images/
+!data/N=5_000/0_854/steady_state_images/
 !data/N=5_000/0_855/steady_state_images/
 !data/N=5_000/0_857/steady_state_images/
 !data/N=5_000/0_860/steady_state_images/
@@ -387,8 +407,11 @@ data/N=5_000/0_900/*
 
 # PERMITIR carpetas con ovito
 !data/N=5_000/0_400/ovito_final/
+!data/N=5_000/0_450/ovito_final/
 !data/N=5_000/0_500/ovito_final/
+!data/N=5_000/0_550/ovito_final/
 !data/N=5_000/0_600/ovito_final/
+!data/N=5_000/0_650/ovito_final/
 !data/N=5_000/0_700/ovito_final/
 !data/N=5_000/0_750/ovito_final/
 !data/N=5_000/0_760/ovito_final/
@@ -402,7 +425,9 @@ data/N=5_000/0_900/*
 !data/N=5_000/0_840/ovito_final/
 !data/N=5_000/0_845/ovito_final/
 !data/N=5_000/0_850/ovito_final/
+!data/N=5_000/0_852/ovito_final/
 !data/N=5_000/0_853/ovito_final/
+!data/N=5_000/0_854/ovito_final/
 !data/N=5_000/0_855/ovito_final/
 !data/N=5_000/0_857/ovito_final/
 !data/N=5_000/0_860/ovito_final/
@@ -412,8 +437,11 @@ data/N=5_000/0_900/*
 
 # PERMITIR carpetas intermedias
 !data/N=5_000/0_400/dat/
+!data/N=5_000/0_450/dat/
 !data/N=5_000/0_500/dat/
+!data/N=5_000/0_550/dat/
 !data/N=5_000/0_600/dat/
+!data/N=5_000/0_650/dat/
 !data/N=5_000/0_700/dat/
 !data/N=5_000/0_750/dat/
 !data/N=5_000/0_760/dat/
@@ -427,7 +455,9 @@ data/N=5_000/0_900/*
 !data/N=5_000/0_840/dat/
 !data/N=5_000/0_845/dat/
 !data/N=5_000/0_850/dat/
+!data/N=5_000/0_852/dat/
 !data/N=5_000/0_853/dat/
+!data/N=5_000/0_854/dat/
 !data/N=5_000/0_855/dat/
 !data/N=5_000/0_857/dat/
 !data/N=5_000/0_860/dat/
@@ -436,8 +466,11 @@ data/N=5_000/0_900/*
 !data/N=5_000/0_900/dat/
 
 !data/N=5_000/0_400/dat_order_parameters/
+!data/N=5_000/0_450/dat_order_parameters/
 !data/N=5_000/0_500/dat_order_parameters/
+!data/N=5_000/0_550/dat_order_parameters/
 !data/N=5_000/0_600/dat_order_parameters/
+!data/N=5_000/0_650/dat_order_parameters/
 !data/N=5_000/0_700/dat_order_parameters/
 !data/N=5_000/0_750/dat_order_parameters/
 !data/N=5_000/0_760/dat_order_parameters/
@@ -451,7 +484,9 @@ data/N=5_000/0_900/*
 !data/N=5_000/0_840/dat_order_parameters/
 !data/N=5_000/0_845/dat_order_parameters/
 !data/N=5_000/0_850/dat_order_parameters/
+!data/N=5_000/0_852/dat_order_parameters/
 !data/N=5_000/0_853/dat_order_parameters/
+!data/N=5_000/0_854/dat_order_parameters/
 !data/N=5_000/0_855/dat_order_parameters/
 !data/N=5_000/0_857/dat_order_parameters/
 !data/N=5_000/0_860/dat_order_parameters/
@@ -461,8 +496,11 @@ data/N=5_000/0_900/*
 
 # Ignorar todo dentro de dat/
 data/N=5_000/0_400/dat/*
+data/N=5_000/0_450/dat/*
 data/N=5_000/0_500/dat/*
+data/N=5_000/0_550/dat/*
 data/N=5_000/0_600/dat/*
+data/N=5_000/0_650/dat/*
 data/N=5_000/0_700/dat/*
 data/N=5_000/0_750/dat/*
 data/N=5_000/0_760/dat/*
@@ -476,7 +514,9 @@ data/N=5_000/0_830/dat/*
 data/N=5_000/0_840/dat/*
 data/N=5_000/0_845/dat/*
 data/N=5_000/0_850/dat/*
+data/N=5_000/0_852/dat/*
 data/N=5_000/0_853/dat/*
+data/N=5_000/0_854/dat/*
 data/N=5_000/0_855/dat/*
 data/N=5_000/0_857/dat/*
 data/N=5_000/0_860/dat/*
@@ -486,8 +526,11 @@ data/N=5_000/0_900/dat/*
 
 # EXCEPTUAR archivos específicos en dat/
 !data/N=5_000/0_400/dat/culture_initial_number_of_cells=5000_density=0.4_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_450/dat/culture_initial_number_of_cells=5000_density=0.45_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_500/dat/culture_initial_number_of_cells=5000_density=0.5_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_550/dat/culture_initial_number_of_cells=5000_density=0.55_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_600/dat/culture_initial_number_of_cells=5000_density=0.6_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_650/dat/culture_initial_number_of_cells=5000_density=0.65_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_700/dat/culture_initial_number_of_cells=5000_density=0.7_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_750/dat/culture_initial_number_of_cells=5000_density=0.75_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_760/dat/culture_initial_number_of_cells=5000_density=0.76_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
@@ -501,7 +544,9 @@ data/N=5_000/0_900/dat/*
 !data/N=5_000/0_840/dat/culture_initial_number_of_cells=5000_density=0.84_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_845/dat/culture_initial_number_of_cells=5000_density=0.845_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_850/dat/culture_initial_number_of_cells=5000_density=0.85_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_852/dat/culture_initial_number_of_cells=5000_density=0.852_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_853/dat/culture_initial_number_of_cells=5000_density=0.853_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_854/dat/culture_initial_number_of_cells=5000_density=0.854_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_855/dat/culture_initial_number_of_cells=5000_density=0.855_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_857/dat/culture_initial_number_of_cells=5000_density=0.857_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_860/dat/culture_initial_number_of_cells=5000_density=0.86_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
@@ -511,8 +556,11 @@ data/N=5_000/0_900/dat/*
 
 # Ignorar todo dentro de dat_order_parameters/
 data/N=5_000/0_400/dat_order_parameters/*
+data/N=5_000/0_450/dat_order_parameters/*
 data/N=5_000/0_500/dat_order_parameters/*
+data/N=5_000/0_550/dat_order_parameters/*
 data/N=5_000/0_600/dat_order_parameters/*
+data/N=5_000/0_650/dat_order_parameters/*
 data/N=5_000/0_700/dat_order_parameters/*
 data/N=5_000/0_750/dat_order_parameters/*
 data/N=5_000/0_760/dat_order_parameters/*
@@ -526,7 +574,9 @@ data/N=5_000/0_830/dat_order_parameters/*
 data/N=5_000/0_840/dat_order_parameters/*
 data/N=5_000/0_845/dat_order_parameters/*
 data/N=5_000/0_850/dat_order_parameters/*
+data/N=5_000/0_852/dat_order_parameters/*
 data/N=5_000/0_853/dat_order_parameters/*
+data/N=5_000/0_854/dat_order_parameters/*
 data/N=5_000/0_855/dat_order_parameters/*
 data/N=5_000/0_857/dat_order_parameters/*
 data/N=5_000/0_860/dat_order_parameters/*
@@ -536,8 +586,11 @@ data/N=5_000/0_900/dat_order_parameters/*
 
 # EXCEPTUAR archivos específicos en dat_order_parameters/
 !data/N=5_000/0_400/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.4_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_450/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.45_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_500/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.5_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_550/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.55_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_600/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.6_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_650/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.65_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_700/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.7_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_750/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.75_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_760/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.76_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
@@ -551,7 +604,9 @@ data/N=5_000/0_900/dat_order_parameters/*
 !data/N=5_000/0_840/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.84_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_845/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.845_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_850/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.85_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_852/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.852_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_853/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.853_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
+!data/N=5_000/0_854/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.854_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_855/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.855_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_857/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.857_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
 !data/N=5_000/0_860/dat_order_parameters/op_culture_initial_number_of_cells=5000_density=0.86_force=Anisotropic_Grosmann_k=3.33_gamma=3_With_Noise_eta=0.033_With_Shrinking_rng_seed=7713914261614_step=00000.dat
